@@ -1,0 +1,17 @@
+.siteNavigation {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 3rem;
+  background-color: blueviolet;
+  color: aliceblue;
+}
+.siteNavigation a {
+  color: aliceblue;
+  text-decoration: none;
+  background-color: rgba(270, 0.5, 3, 0.5);
+  padding: 0.3rem 1rem;
+  border-radius: 8px;
+}
