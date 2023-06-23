@@ -1,6 +1,10 @@
+@import url(layout/siteLayout.module.css);
+@import url(siteFooter/siteFooter.module.css);
+@import url(siteNavigation/siteNavigation.module.css);
 * {
   font-family: "Vazir";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s;
 }
