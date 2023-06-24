@@ -8,3 +8,10 @@
   box-sizing: border-box;
   transition: 0.3s;
 }
+.app{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
