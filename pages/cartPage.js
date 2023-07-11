@@ -1,4 +1,5 @@
 import siteLayout from "../layout/siteLayout.js";
 
-const code = `${siteLayout("<div>it is cart page</div>")}`;
+const cartPage = `<div class="siteLayoutContent" >it is cart page</div>`;
+const code = siteLayout(cartPage);
 export default code;

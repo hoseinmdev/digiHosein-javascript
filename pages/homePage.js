@@ -1,5 +1,12 @@
+import landingSlider from "../components/landingSlider/landingSlider.js";
 import siteLayout from "../layout/siteLayout.js";
-const homepage = `<div class="homePage">it is home page</div>`;
+import getProducts from "../components/getProducts/getProducts.js";
+import scrollToUpButton from "../components/scrollToUpButton/scrollToUpButton.js";
+const homepage = `<div  class="siteLayoutContent">
+    ${landingSlider()}
+    ${getProducts()}
+    ${scrollToUpButton()}
+</div>`;
 
 const code = siteLayout(homepage);
 
