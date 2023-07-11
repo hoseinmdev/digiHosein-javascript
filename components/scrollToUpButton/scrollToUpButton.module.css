@@ -1,0 +1,8 @@
+.scrollToUpButton {
+  /* border-bottom: 1px solid #dc2626; */
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: #334155;
+  color: white;
+  border-radius: 8px;
+}
