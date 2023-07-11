@@ -1,13 +1,11 @@
-import siteFooter from "../siteFooter/siteFooter.js";
-import siteNavigation from "../siteNavigation/siteNavigation.js";
+import siteFooter from "../components/siteFooter/siteFooter.js";
+import siteNavigation from "../components/siteNavigation/siteNavigation.js";
 
 const siteLayout = (children) => {
   return ` 
     <div class="siteLayout">
         ${siteNavigation}
-        <div class="noneShow siteLayoutContent">
-            ${children}
-        </div>
+        ${children}
         ${siteFooter}
     </div>`;
 };
