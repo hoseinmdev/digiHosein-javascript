@@ -1,5 +1,6 @@
-import { allProducts } from "../../db.js";
-import numberToFa from "../../utils/NumberToFa.js";
+import { allProducts } from "../../../db.js";
+import numberToFa from "../../../utils/numberToFa.js";
+import changeHash from "../../../utils/changeHash.js";
 const productsContainer = document.createElement("div");
 productsContainer.classList.add("productsContainer");
 
@@ -46,18 +47,14 @@ const productActions = () => {
   const timeout = setTimeout(() => {
     const imagesOfProducts = document.querySelectorAll(".imageStyle");
     const titleOfProducts = document.querySelectorAll(".productTitle");
-    imagesOfProducts.forEach((p) =>
-      p.addEventListener("click", () => {
-        location.href = `#productPage-${p.id}`;
-        location.reload();
-      })
-    );
-    titleOfProducts.forEach((p) =>
-      p.addEventListener("click", () => {
-        location.href = `#productPage-${p.id}`;
-        location.reload();
-      })
-    );
+    [imagesOfProducts, titleOfProducts].forEach((items) => {
+      items.forEach((p) => {
+        p.addEventListener("click", () => {
+          changeHash(`#productPage-${p.id}`);
+          location.reload();
+        });
+      });
+    });
     clearTimeout(timeout);
   }, 100);
 };

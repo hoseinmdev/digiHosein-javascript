@@ -6,5 +6,4 @@ export const root = document.getElementById("root");
 const products = getFromLocal("allProducts");
 
 if (!products) saveToLocal("allProducts", allProducts);
-
 updateRoot();

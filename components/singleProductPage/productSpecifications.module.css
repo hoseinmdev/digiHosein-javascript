@@ -1,0 +1,24 @@
+.specificationsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* background-color: aqua; */
+  box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.25);
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+.specificationContainer {
+  width: 100%;
+  border-bottom: 1px solid #fecaca;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+}

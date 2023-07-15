@@ -17,6 +17,25 @@ export const allProducts = [
     storage: 256,
     system: 0,
     battery: 3000,
+    specifications: [
+      { title: "پردازنده / Apple A15 Bionic" },
+      {
+        title: "صفحه نمایش / 	6.1 اینچ",
+      },
+      {
+        title: "اسپیکر / استریو ( دوگانه )",
+      },
+      { title: "رم / 4 گیگابایت رم" },
+      {
+        title: "دوربین اصلی / 12 مگاپیکسل",
+      },
+      {
+        title: "حافظه داخلی / 256 گیگابایت",
+      },
+      {
+        title: "باتری / 3240 میلی آمپر ساعت",
+      },
+    ],
   },
   {
     id: 2,
@@ -32,6 +51,25 @@ export const allProducts = [
     screen: 6.2,
     system: 1,
     battery: 4000,
+    specifications: [
+      { title: "پردازنده / Exynos 2100 & Qualcomm SM8350 Snapdragon 888 5G" },
+      {
+        title: "صفحه نمایش / 	6.2 اینچ",
+      },
+      {
+        title: "اسپیکر / استریو ( دوگانه )",
+      },
+      { title: "رم / 8 گیگابایت رم" },
+      {
+        title: "دوربین اصلی / 12 مگاپیکسل",
+      },
+      {
+        title: "حافظه داخلی / 256 گیگابایت",
+      },
+      {
+        title: "باتری / 4000 میلی آمپر ساعت",
+      },
+    ],
     imageURL: "./assets/images/products/galaxyS21.webp",
   },
   {
@@ -544,53 +582,6 @@ export const allProducts = [
   //   imageURL: huaweiMatePadProWgr,
   // },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // export const filters = {
 //   phones: [

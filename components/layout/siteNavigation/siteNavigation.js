@@ -1,3 +1,6 @@
+import cartIcon from "./cartIcon/cartIcon.js";
+import searchBox from "./searchBox/searchBox.js";
+
 const routes = [
   {
     title: "خانه",
@@ -41,21 +44,16 @@ const siteNavigation = `
     <div class="headerOfSiteNavigation">
         <div class="logoAndSearchContainer">
             <div class="siteLogo"><img src="../../assets/images/siteLogo/siteLogo.png"/></div>
-            <div class="searchBox">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input placeholder="محصول مورد نظر را جستجو کنید ..."/>
-            </div>
+            ${searchBox()}
         </div>
         <div class="signupAndCartContainer">
             <button class="signUpContainer">ورود | ثبت نام</button>
-            <div class="cartContainer">
-                <i class="fa-solid fa-cart-shopping"></i>
-                <span class="numberOfProductInCart">3</span>
-            </div>
+            ${cartIcon()}
         </div>
     </div>
     <div class="footerOfSiteNavigation">
         ${routesContainer.innerHTML}
     </div>
     </div>`;
+
 export default siteNavigation;

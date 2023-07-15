@@ -1,3 +1,4 @@
+import cartIcon from "./components/layout/siteNavigation/cartIcon/cartIcon.js";
 import { root } from "./index.js";
 import { routesPath } from "./routesPath.js";
 import fadeShow from "./utils/fadeShowElement.js";
@@ -13,6 +14,7 @@ export const updateRoot = () => {
   // FADE SHOW CHILD OF LAYOUT
   const elementToFadeShow = document.querySelector(".siteLayoutContent");
   fadeShow(elementToFadeShow, 50);
+  cartIcon();
   scrollToUp();
 };
 
