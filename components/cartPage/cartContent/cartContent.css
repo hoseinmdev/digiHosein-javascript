@@ -35,7 +35,7 @@
 .cartProductDetailImage {
   cursor: pointer;
 }
-.deleteProductIcon{
+.deleteProductIcon {
   font-size: 0.8rem !important;
 }
 .cartProductImageAndDeleteIcon {
@@ -72,7 +72,7 @@
   font-size: 1.1rem;
   /* margin-bottom: 1.5em; */
 }
-.deleteProductButton{
+.deleteProductButton {
   color: white;
   background-color: #ef4444;
 }
@@ -94,7 +94,7 @@
   align-items: center;
   border: 1px solid #ef4444;
 }
-.productQuantityController button:hover{
-    background-color: #ef4444;
-    color: white;
+.productQuantityController button:hover {
+  background-color: #ef4444;
+  color: white;
 }

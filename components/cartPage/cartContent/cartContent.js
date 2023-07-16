@@ -81,7 +81,7 @@ const cartContent = () => {
   </div>`;
   reloadDom(".cartContentContainer", cartContentJsx);
   checkout();
-  cartIcon()
+  cartIcon();
   timeout();
   return cartContentJsx;
 };
@@ -113,6 +113,7 @@ const timeout = () => {
       element.addEventListener("click", (e) => {
         productActions({ type: "deleteProduct", id: e.target.id });
         cartContent();
+        location.reload();
       });
     });
 

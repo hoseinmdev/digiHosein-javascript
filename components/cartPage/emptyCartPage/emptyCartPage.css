@@ -1,0 +1,15 @@
+.emptyCartImage {
+  width: 20rem;
+}
+.yourCartIsEmptyText {
+  font-size: 1.5rem;
+  color: #334155;
+}
+.backToHomePageButton {
+  border-radius: 8px;
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 25rem;
+}

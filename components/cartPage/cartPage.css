@@ -1,5 +1,6 @@
 @import url(cartContent/cartContent.css);
 @import url(checkout/checkout.css);
+@import url(emptyCartPage/emptyCartPage.css);
 
 .cartPageContainer {
   width: 100%;
