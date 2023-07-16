@@ -1,0 +1,34 @@
+.circleCategoriesContainer {
+  width: 100%;
+  max-width: 1360px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+.circleCategoriesContainer div {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+  color: #475569;
+}
+.circleCategoriesContainer div img {
+  width: 9rem;
+  border: 3px solid#ef4444;
+  padding: 0.2rem;
+  border-radius: 100%;
+  animation: circleCategoryAnimation 1s infinite alternate;
+}
+
+@keyframes circleCategoryAnimation {
+  from {
+    border: 4px solid #ef4444;
+  }
+  to {
+    border: 2px solid #ec4899;
+  }
+}
