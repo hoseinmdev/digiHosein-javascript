@@ -6,7 +6,8 @@ const emptyCartPage = () => {
         <img class="emptyCartImage" src="../assets/images/other/empty-shopping-trolley.png"/>
         <p class="yourCartIsEmptyText">سبد خرید شما خالی است :(</p>
         <button class="backToHomePageButton">بازگشت به صفحه اصلی</button>
-    </div>`;
+        </div>`;
+  timeout();
   return emptyCartPage;
 };
 
@@ -19,5 +20,4 @@ const timeout = () => {
     clearTimeout(timeout);
   }, 100);
 };
-timeout();
 export default emptyCartPage;

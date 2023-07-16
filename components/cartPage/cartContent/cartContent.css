@@ -98,3 +98,13 @@
   background-color: #ef4444;
   color: white;
 }
+.productPreviousPrice {
+  font-size: 0.8rem;
+  text-decoration: line-through;
+  color: #475569;
+}
+.productNewPrice {
+  color: #e11d48;
+  font-weight: bold;
+  font-size: 1rem;
+}

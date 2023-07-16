@@ -43,7 +43,7 @@ export const allProducts = [
     category: "phones",
     title: " موبایل سامسونگ Galaxy s21",
     price: 37199000,
-    // discount: 7,
+    discount: 0,
     simcard: 2,
     camera: 12,
     ram: 8,

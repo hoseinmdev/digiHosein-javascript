@@ -1,3 +1,4 @@
+import changeHash from "../../../utils/changeHash.js";
 import numberToFa from "../../../utils/numberToFa.js";
 import { findProduct, productActions } from "../../../utils/productUtils.js";
 import reloadDom from "../../../utils/reloadDom.js";
@@ -35,6 +36,8 @@ const cartContent = () => {
   const renderCartProducts = () => {
     cartProductsContainer.innerHTML = "";
     cart.forEach((p) => {
+      const productDiscount = (p.price * p.discount) / 100;
+      const finalPrice = p.price - productDiscount;
       const product = document.createElement("div");
       product.classList.add("cartProductContainer");
       product.setAttribute("id", p.id);
@@ -45,7 +48,16 @@ const cartContent = () => {
         </div>
         <div class="cartProductTitleAndPrice">
             <h4 class="productDetailTitle"id=${p.id}>${p.title}</h4>
-            <p>${numberToFa(p.price)} تومان</p>
+            ${
+              !p.discount
+                ? `<p>${numberToFa(p.price)} تومان</p>`
+                : `<div>
+                  <p class="productPreviousPrice">${numberToFa(
+                    p.price
+                  )} تومان</p>
+                  <p class="productNewPrice">${numberToFa(finalPrice)} تومان</p>
+                </div>`
+            }
             ${renderProductQuantityController(p.id)}
         </div>
       </div>
@@ -115,9 +127,27 @@ const timeout = () => {
         cartContent();
         location.reload();
       });
+
+      const imagesOfProducts = document.querySelectorAll(
+        ".cartProductDetailImage"
+      );
+      const titleOfProducts = document.querySelectorAll(".productTitle");
+      [imagesOfProducts, titleOfProducts].forEach((items) => {
+        items.forEach((p) => {
+          p.addEventListener("click", () => {
+            changeHash(`#productPage-${p.id}`);
+            location.reload();
+          });
+        });
+      });
     });
 
     clearTimeout(timeout);
   }, 100);
 };
+window.addEventListener("hashchange" , () => {
+  if (location.hash === "#cart") {
+    timeout()
+  }
+})
 export default cartContent;

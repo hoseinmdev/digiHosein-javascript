@@ -66,16 +66,10 @@ const timeout = () => {
     const productsTitle = document.querySelectorAll(".productDetailTitle");
     [productsImg, productsTitle].forEach((items) => {
       items.forEach((p) => {
-        p.addEventListener("click", () => {
-          changeHash(`#productPage-${p.id}`);
-          location.reload();
-        });
+        p.addEventListener("click", () => changeHash(`#productPage-${p.id}`));
       });
     });
-    cartButton.addEventListener("click", () => {
-      changeHash("#cart");
-      location.reload();
-    });
+    cartButton.addEventListener("click", () => changeHash("#cart"));
     clearTimeout(timeout);
   }, 100);
 };
