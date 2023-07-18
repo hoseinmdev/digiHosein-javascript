@@ -8,7 +8,7 @@
 @import url(components/cartPage/cartPage.css);
 @import url(components/homePage/landingBanners/landingBanners.css);
 @import url(components/homePage/circleCategories/circleCategories.css);
-@import url(components/homePage/ProductsLayout/productsLayout.css);
+@import url(components/homePage/ProductsLayout/productsLayout/productsLayout.css);
 * {
   font-family: "Vazir";
   margin: 0;

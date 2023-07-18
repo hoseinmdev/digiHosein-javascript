@@ -1,4 +1,4 @@
-import reloadDom from "../../../utils/reloadDom.js";
+import reloadDom from "../../../../utils/reloadDom.js";
 
 const productsLayout = (children, title, bgColor) => {
   const homePageProductsLayoutJsx = `
