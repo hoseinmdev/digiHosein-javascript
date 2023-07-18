@@ -7,7 +7,7 @@
 }
 .productContainer {
   position: relative;
-  /* box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.2); */
+  border: 1px solid #cbd5e1;
   background-color: #ffffff;
   transition: all 0.2s ease-in-out;
   overflow: hidden;

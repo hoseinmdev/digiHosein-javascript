@@ -2,32 +2,32 @@ const categories = [
   {
     title: "گوشی موبایل",
     imageUrl: "../../../assets/images/circleImages/mobilee.1",
-    // path: "#cart",
+    path: "#categories-1-phones",
   },
   {
     title: "گیمینگ",
     imageUrl: "../../../assets/images/circleImages/gaming.webp",
-    // path: "#productPage",
+    path: "#categories-1-consoles",
   },
   {
     title: "تبلت",
     imageUrl: "../../../assets/images/circleImages/tablet.3",
-    // path: "#cart",
+    path: "#categories-1-tablets",
   },
   {
     title: "لپتاپ",
     imageUrl: "../../../assets/images/circleImages/laptop.2",
-    // path: "#cart",
+    path: "#categories-1-laptops",
   },
   {
     title: "هدفون و هندزفری",
     imageUrl: "../../../assets/images/circleImages/headphones.webp",
-    // path: "#cart",
+    path: "#categories-1-headphones",
   },
   {
     title: "اسپیکر",
     imageUrl: "../../../assets/images/circleImages/skeaper.webp",
-    // path: "#cart",
+    path: "#categories-1-speakers",
   },
 ];
 const categoriesContainer = document.createElement("div");
