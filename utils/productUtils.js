@@ -1,6 +1,6 @@
 import getFromLocal from "./getFromLocal.js";
 import saveToLocal from "./saveToLocal.js";
-import productIntroduction from "../components/singleProductPage/productIntroduction.js";
+import productIntroduction from "../components/singleProductPage/productIntroduction/productIntroduction.js";
 import cartContent from "../components/cartPage/cartContent/cartContent.js";
 
 export const productActions = ({ type, id }) => {
