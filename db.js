@@ -3,7 +3,7 @@ export const allProducts = [
   //BEST SELLER
   //BEST SELLER
   {
-    id: 1,
+    id: 50,
     quantity: 1,
     category: "bestSeller",
     title: "موبایل اپل مدل iPhone 13",
@@ -38,7 +38,7 @@ export const allProducts = [
     ],
   },
   {
-    id: 31,
+    id: 51,
     quantity: 1,
     brand: 0,
     group: 1,
@@ -49,7 +49,7 @@ export const allProducts = [
     imageURL: "./assets/images/products/partyBox110.jpg",
   },
   {
-    id: 39,
+    id: 52,
     quantity: 1,
     brand: 3,
     gaming: 1,
@@ -60,7 +60,7 @@ export const allProducts = [
     imageURL: "./assets/images/products/galaxyBudsLive.jpg",
   },
   {
-    id: 9,
+    id: 53,
     quantity: 1,
     brand: 0,
     discount: 50,
