@@ -1,4 +1,4 @@
-import { HashProductId, findProduct } from "../../utils/productUtils.js";
+import { HashProductId, findProduct } from "../../../utils/productUtils.js";
 
 const specificationsContainer = document.createElement("div");
 specificationsContainer.classList.add("specificationsContainer");
