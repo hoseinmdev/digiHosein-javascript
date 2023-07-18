@@ -1,5 +1,6 @@
 .specificationsContainer {
-  width: 80%;
+  width: 100%;
+  max-width: 1360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
