@@ -2,9 +2,9 @@
 @import url(components/siteLayoutComponents/siteFooter/siteFooter.css);
 @import url(components/siteLayoutComponents/siteNavigation/siteNavigation.css);
 @import url(components/homePage/landingSlider/landingSlider.css);
-@import url(components/singleProductPage/productIntroduction.module.css);
+@import url(components/singleProductPage/productIntroduction/productIntroduction.module.css);
 @import url(components/scrollToUpButton/scrollToUpButton.module.css);
-@import url(components/singleProductPage/productSpecifications.module.css);
+@import url(components/singleProductPage/productSpecifications/productSpecifications.module.css);
 @import url(components/cartPage/cartPage.css);
 @import url(components/homePage/landingBanners/landingBanners.css);
 @import url(components/homePage/circleCategories/circleCategories.css);
@@ -35,64 +35,4 @@ button {
 ::-webkit-scrollbar-thumb {
   background: #334155;
   border-radius: 15px;
-}
-
-.swiper {
-  width: 100%;
-  max-width: 1360px;
-  height: 28rem;
-  /* background-color: #334155 !important; */
-}
-/* .swiper-pagination{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.8rem;
-} */
-.swiper-pagination-bullet-active {
-  background-color: white !important;
-  width: 1.5rem !important;
-  border-radius: 5px !important;
-}
-.swiper-pagination-bullet {
-  background-color: white !important;
-}
-.swiper-button-next {
-  left: 20px !important;
-  width: 3rem !important;
-  height: 3rem !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding: 0.5rem !important;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.4);
-  border-radius: 100% !important;
-}
-.swiper-button-next::after {
-  font-size: 1.3rem !important;
-}
-.swiper-button-prev {
-  right: 20px !important;
-  width: 3rem !important;
-  height: 3rem !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  padding: 0.5rem !important;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.4);
-  border-radius: 100% !important;
-}
-.swiper-button-prev::after {
-  font-size: 1.3rem !important;
-}
-.swiper-button-disabled {
-  display: none !important;
-}
-.swiper-slide {
-  color: white;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
 }
