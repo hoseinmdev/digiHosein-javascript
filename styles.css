@@ -90,18 +90,7 @@ button {
 .swiper-button-disabled {
   display: none !important;
 }
-
-.swiper-wrapper {
-  /* padding: 5rem; */
-  /* background-color: blueviolet; */
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: center; */
-}
 .swiper-slide {
-  /* width: 50% !important; */
-  /* background-color: white; */
-  /* padding: 1rem; */
   color: white;
   display: flex !important;
   justify-content: center;
