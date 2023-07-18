@@ -1,5 +1,5 @@
-import siteFooter from "../components/layout/siteFooter/siteFooter.js";
-import siteNavigation from "../components/layout/siteNavigation/siteNavigation.js";
+import siteFooter from "../components/siteLayoutComponents/siteFooter/siteFooter.js";
+import siteNavigation from "../components/siteLayoutComponents/siteNavigation/siteNavigation.js";
 
 const siteLayout = (children) => {
   return ` 

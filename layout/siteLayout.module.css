@@ -5,22 +5,21 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 1360px;
   gap: 1.5rem;
 }
 .noneShow {
   opacity: 0;
-  scale: 1.05;
+  scale: 0.99;
 }
 .siteLayoutContent {
   width: 100%;
   min-height: 50vh;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 1.5rem;
+  gap: 3rem;
   flex-wrap: wrap;
   overflow: auto;
 }

@@ -1,17 +1,17 @@
 .productsContainer {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  /* margin-right: -2rem; */
   align-items: center;
   gap: 1rem;
 }
 .productContainer {
   position: relative;
   /* box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.2); */
-  border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   transition: all 0.2s ease-in-out;
   overflow: hidden;
+  color: #1e293b;
   width: 12.5rem;
   height: 23rem;
   padding: 0.5rem;
@@ -39,18 +39,18 @@
 }
 .productDiscount {
   /* width: 2rem; */
-  width: 100%;
-  height: 1.7rem;
+  width: 80%;
+  height: 1.5rem;
   padding: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border-radius: 5px; */
+  border-radius: 5px;
   background-color: #e11d48;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   color: white;
-  animation: productDiscountAnimation 1s infinite alternate;
+  animation: productDiscountAnimation 2s infinite alternate;
 }
 .productPreviousPrice {
   font-size: 0.8rem;
@@ -64,7 +64,7 @@
 }
 @keyframes productDiscountAnimation {
   from {
-    opacity: 0.5;
+    opacity: 0.7;
   }
   to {
     opacity: 1;

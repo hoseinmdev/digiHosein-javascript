@@ -6,7 +6,7 @@ import {
   productActions,
 } from "../../utils/productUtils.js";
 import reloadDom from "../../utils/reloadDom.js";
-import cartIcon from "../layout/siteNavigation/cartIcon/cartIcon.js";
+import cartIcon from "../../components/siteLayoutComponents/siteNavigation/cartIcon/cartIcon.js";
 
 const renderProductPrice = (price, discount) => {
   if (discount) {
@@ -73,6 +73,7 @@ const timeout = () => {
       addToCartButton.addEventListener("click", (e) => {
         productActions({ type: "addToCart", id: addToCartButton.id });
         productIntroduction();
+        location.reload()
       });
     }
     if (inCartButton) {
@@ -85,5 +86,8 @@ const timeout = () => {
     clearTimeout(timeout);
   }, 100);
 };
+window.addEventListener("hashchange", () => {
+  if (location.hash.split("#")[1].split("-")[0] === "productPage") timeout();
+});
 timeout();
 export default productIntroduction;

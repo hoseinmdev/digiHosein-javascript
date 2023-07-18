@@ -2,7 +2,7 @@ import changeHash from "../../../utils/changeHash.js";
 import numberToFa from "../../../utils/numberToFa.js";
 import { findProduct, productActions } from "../../../utils/productUtils.js";
 import reloadDom from "../../../utils/reloadDom.js";
-import cartIcon from "../../layout/siteNavigation/cartIcon/cartIcon.js";
+import cartIcon from "../../../components/siteLayoutComponents/siteNavigation/cartIcon/cartIcon.js";
 import checkout from "../checkout/checkout.js";
 
 const cartProductsContainer = document.createElement("div");
@@ -145,9 +145,9 @@ const timeout = () => {
     clearTimeout(timeout);
   }, 100);
 };
-window.addEventListener("hashchange" , () => {
+window.addEventListener("hashchange", () => {
   if (location.hash === "#cart") {
-    timeout()
+    timeout();
   }
-})
+});
 export default cartContent;

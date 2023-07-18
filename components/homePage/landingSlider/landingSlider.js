@@ -3,7 +3,10 @@ import reloadDom from "../../../utils/reloadDom.js";
 
 const allSlides = [
   {
-    img: "../../../assets/images/slider/bannerConsole.webp",
+    img: "../../../assets/images/landing/gamingConsole.webp",
+  },
+  {
+    img: "../../../assets/images/landing/laptop.webp",
   },
   {
     img: "../../../assets/images/slider/bannerSpeaker.webp",
@@ -12,13 +15,13 @@ const allSlides = [
     img: "../../../assets/images/slider/bannerAirpods.webp",
   },
   {
-    img: "../../../assets/images/slider/bannerRamHard.webp",
+    img: "../../../assets/images/landing/littleSpeaker.webp",
+  },
+  {
+    img: "../../../assets/images/slider/bannerConsole.webp",
   },
   {
     img: "../../../assets/images/slider/bannerAirpods2.webp",
-  },
-  {
-    img: "../../../assets/images/slider/bannerDigitalWatch.webp",
   },
   {
     img: "../../../assets/images/slider/bannerTablet.webp",
@@ -26,20 +29,6 @@ const allSlides = [
 ];
 let index = 0;
 let sliderInterval;
-let touchPosition;
-
-// const onTouchStartHandler = (e) => {
-//   console.log(e);
-//   touchPosition = e.touches[0].clientX;
-// };
-// const onTouchMoveHandler = (e) => {
-//   if (touchPosition === null) return;
-//   const currentTouch = e.touches[0].clientX;
-//   const diff = touchPosition - currentTouch;
-//   if (diff > 5) backSlide();
-//   if (diff < -5) nextSlide();
-//   touchPosition = null;
-// };
 
 const slideChanger = (e) => {
   const action = e.currentTarget.dataset.action;
@@ -57,7 +46,7 @@ const slideChanger = (e) => {
 
 const autoSlideChanger = () => {
   sliderInterval = setInterval(() => {
-    index++;
+    index === allSlides.length - 1 ? (index = 0) : index++;
     const slide = document.querySelector(".slideImage");
     slide.src = allSlides[index].img;
     fadeShow(slide, 150);
@@ -94,15 +83,8 @@ const landingSlider = () => {
 
 const sliderActions = () => {
   const timeout = setTimeout(() => {
-    // const sliderContainer = document.querySelector(".landingSliderContainer");
-    // sliderContainer.addEventListener("touchstart", (e) =>
-    //   onTouchStartHandler(e)
-    // );
-    // sliderContainer.addEventListener("touchmove", (e) => onTouchMoveHandler(e));
     const nextSlideButton = document.querySelector(".nextSlideButton");
     const backSlideButton = document.querySelector(".backSlideButton");
-    // nextSlideButton.removeEventListener("click", slideChanger);
-    // backSlideButton.removeEventListener("click", slideChanger);
     nextSlideButton.addEventListener("click", slideChanger);
     backSlideButton.addEventListener("click", slideChanger);
     autoSlideChanger();

@@ -9,6 +9,7 @@ productsContainer.classList.add("cartIconProductsContainer");
 
 const renderProductsInCart = (cart) => {
   productsContainer.innerHTML = "";
+  productsContainer.innerHTML = `<h3>سبد خرید شما :</h2>`;
   cart.forEach((p) => {
     const product = document.createElement("div");
     product.classList.add("cartIconProductContainer");
@@ -49,7 +50,7 @@ const cartIcon = () => {
     .filter((p) => p !== undefined);
   saveToLocal("cart", cart);
   const cartContainerJsx = `
-  <div class="cartContainer">
+  <div class="cartContainer ${cart.length !== 0 ? "showCartContainer" : ""}">
     <i class="fa-solid fa-cart-shopping"></i>
     <span class="numberOfProductInCart">${cart.length}</span>
     ${renderProductsInCart(cart)}

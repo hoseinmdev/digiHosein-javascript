@@ -20,4 +20,7 @@ const timeout = () => {
     clearTimeout(timeout);
   }, 100);
 };
+window.addEventListener("hashchange", () => {
+  if (location.hash === "#cart") timeout();
+});
 export default emptyCartPage;

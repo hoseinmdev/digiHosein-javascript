@@ -1,0 +1,16 @@
+.landingBannersContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1260px;
+}
+.landingBannersContainer img {
+  cursor: pointer;
+  padding: 0.5rem;
+  /* border-bottom: 1px solid #94a3b8; */
+  /* border-top: 1px solid #94a3b8; */
+  width: 50%;
+  height: 100%;
+  border-radius: 15px;
+}

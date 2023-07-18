@@ -1,9 +1,6 @@
-import { allProducts } from "../../../db.js";
-import numberToFa from "../../../utils/numberToFa.js";
-import changeHash from "../../../utils/changeHash.js";
-const productsContainer = document.createElement("div");
-productsContainer.classList.add("productsContainer");
-
+import { allProducts } from "../../../../db.js";
+import numberToFa from "../../../../utils/numberToFa.js";
+import changeHash from "../../../../utils/changeHash.js";
 const renderProductPrice = (price, discount) => {
   if (discount) {
     const productDiscount = (price * discount) / 100;
@@ -23,11 +20,21 @@ const renderProductPrice = (price, discount) => {
   }
 };
 const getProducts = (category) => {
-  allProducts.forEach((p) => {
-    const product = document.createElement("div");
-    product.classList.add("productContainer");
-    product.setAttribute("id", p.id);
-    product.innerHTML = `
+  const productsContainer = document.createElement("div");
+  productsContainer.classList.add("swiper-wrapper");
+  allProducts
+    .map((p) => {
+      if (p.category === category) {
+        return p;
+      }
+    })
+    .filter((p) => p !== undefined)
+    .forEach((p) => {
+      const swiperSlide = document.createElement("div");
+      swiperSlide.classList.add("swiper-slide");
+      const product = document.createElement("div");
+      product.classList.add("productContainer");
+      product.innerHTML = `
         <img
         id=${p.id}
         class=imageStyle
@@ -39,9 +46,10 @@ const getProducts = (category) => {
           </h4>
           ${renderProductPrice(p.price, p.discount)}
         </div>`;
-    productsContainer.append(product);
-  });
-  return productsContainer.outerHTML;
+      swiperSlide.append(product);
+      productsContainer.append(swiperSlide);
+    });
+  return productsContainer;
 };
 const productActions = () => {
   const timeout = setTimeout(() => {

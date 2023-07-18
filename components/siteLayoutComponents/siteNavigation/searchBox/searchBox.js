@@ -11,6 +11,7 @@ productsFoundContainer.classList.add("productsFoundInSearchContainer");
 const renderProductCountainer = (productsFound, inputValue) => {
   if (productsFound.length !== 0) {
     productsFoundContainer.innerHTML = `<p class="paddingTop1Rem">محصولات پیدا شده برای شما ...</p>`;
+    timeout();
   } else if (productsFound.length === 0 && inputValue !== "") {
     productsFoundContainer.innerHTML = `<p class="paddingTop1Rem">متاسفانه محصولی پیدا نشد :(</p>`;
   } else {
@@ -69,6 +70,8 @@ const timeout = () => {
   const timeout = setTimeout(() => {
     const searchInputBox = document.querySelector(".searchInput");
     const backdrop = document.querySelector(".backdrop");
+    const productsImg = document.querySelectorAll(".productDetailImage");
+    const productsTitle = document.querySelectorAll(".productDetailTitle");
 
     searchInputBox.addEventListener("click", () => {
       backdrop.classList.add("showBackdrop");
@@ -79,6 +82,7 @@ const timeout = () => {
         productsFoundContainer.outerHTML
       );
     });
+
     backdrop.addEventListener("click", () => {
       renderProductCountainer([]);
       searchInputBox.value = "";
@@ -92,10 +96,11 @@ const timeout = () => {
 
     searchInputBox.addEventListener("input", (e) => {
       productsFoundContainer.style.display = "flex";
-      const searchValue = e.target.value;
+      const searchValue = e.target.value.toLowerCase();
       const productsFound = allProducts
         .map((p) => {
-          if (p.title.includes(searchValue)) return p;
+          const productTitle = p.title.toLowerCase();
+          if (productTitle.includes(searchValue)) return p;
         })
         .filter((p) => p !== undefined);
 
@@ -104,8 +109,6 @@ const timeout = () => {
       renderProductCountainer(productsFound, searchInputBox.value);
     });
 
-    const productsImg = document.querySelectorAll(".productDetailImage");
-    const productsTitle = document.querySelectorAll(".productDetailTitle");
     [productsImg, productsTitle].forEach((items) => {
       items.forEach((p) => {
         p.addEventListener("click", () => {

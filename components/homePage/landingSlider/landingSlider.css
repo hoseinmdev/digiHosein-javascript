@@ -1,5 +1,6 @@
 .landingSliderContainer {
   width: 100%;
+  max-width: 1360px;
   height: 24rem;
   border-radius: 8px;
   display: flex;
