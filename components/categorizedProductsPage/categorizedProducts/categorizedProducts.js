@@ -1,5 +1,8 @@
 import getFromLocal from "../../../utils/getFromLocal.js";
 import numberToFa from "../../../utils/numberToFa.js";
+import reloadDom from "../../../utils/reloadDom.js";
+import saveToLocal from "../../../utils/saveToLocal.js";
+import categorizedProductsFilters from "../categorizedProductsFilters/categorizedProductsFilters.js";
 
 const productsContainer = document.createElement("div");
 productsContainer.classList.add("categorizedProductsContainer");
@@ -25,13 +28,33 @@ const renderProductPrice = (price, discount) => {
 const categorizedProducts = () => {
   const hashProductsCategory = location.hash.split("#")[1].split("-")[2];
   const allProducts = getFromLocal("allProducts");
+  const enabledFilters = getFromLocal("enabledFilters");
   const products = allProducts.filter(
     (p) => p.category === hashProductsCategory
   );
-  products.forEach((p) => {
+  const filtersObject = {};
+
+  enabledFilters.forEach((key) => {
+    const [filterKey, filterValue] = key.split("_");
+    const settledFilterValue = filtersObject[filterKey];
+    if (settledFilterValue) {
+      filtersObject[filterKey] = [...settledFilterValue, filterValue];
+    } else {
+      filtersObject[filterKey] = [filterValue];
+    }
+  });
+  let filteredProducts = products.filter((product) => {
+    return Object.entries(filtersObject).every(([prop, find]) => {
+      const convertStrToNumber = find.map((num) => parseInt(num));
+      return convertStrToNumber.includes(product[prop]);
+    });
+  });
+
+  productsContainer.innerHTML = "";
+  filteredProducts.forEach((p) => {
     const product = document.createElement("div");
     product.classList.add("productContainer");
-    product.innerHTML = `
+    const productJsx = `
         <img
         id=${p.id}
         class=imageStyle
@@ -43,11 +66,36 @@ const categorizedProducts = () => {
           </h4>
           ${renderProductPrice(p.price, p.discount)}
         </div>`;
+    product.innerHTML = productJsx;
     productsContainer.append(product);
   });
+  if (filteredProducts.length === 0) {
+    productsContainer.innerHTML = `<div class="notFoundProductContainer" >
+    <img src="../../../assets/images/other/notFoundProduct.png" />
+    <p class="notFoundProductText">متاسفانه محصولی یافت نشد :(</p>
+    <button class="deleteAllFiltersButton">حذف  همه فیلتر ها</button>
+    </div>`;
+    timeout()
+  }
+  reloadDom(".categorizedProductsContainer", productsContainer.outerHTML);
   return productsContainer.outerHTML;
 };
-window.addEventListener("hashchange", () => {
-  const hashProductsCategory = location.hash.split("#")[1].split("-")[0];
-});
+
+
+const timeout = () => {
+  const timeout = setTimeout(() => {
+    const deleteAllFiltersButton = document.querySelector(
+      ".deleteAllFiltersButton"
+    );
+    if (deleteAllFiltersButton) {
+      deleteAllFiltersButton.addEventListener("click", () => {
+        saveToLocal("enabledFilters", []);
+        categorizedProducts()
+        categorizedProductsFilters()
+      });
+    }
+
+    clearTimeout(timeout);
+  }, 10);
+};
 export default categorizedProducts;
