@@ -10,6 +10,7 @@
 @import url(components/homePage/circleCategories/circleCategories.css);
 @import url(components/homePage/ProductsLayout/productsLayout/productsLayout.css);
 @import url(components/categorizedProductsPage/categorizedProducts/categorizedProducts.css);
+@import url(components/categorizedProductsPage/categorizedProductsPage.css);
 
 * {
   font-family: "Vazir";
