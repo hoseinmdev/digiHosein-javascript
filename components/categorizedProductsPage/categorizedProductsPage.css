@@ -1,0 +1,24 @@
+@import url(categorizedProducts/categorizedProducts.css);
+@import url(categorizedProductsFilters/categorizedProductsFilters.css);
+
+.categorizedProductsPage {
+  max-width: 1360px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.categorizedProductsBlock {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.categorizedProductsBlock p {
+  color: #475569;
+  font-size: 1.05rem;
+}
