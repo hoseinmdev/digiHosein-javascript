@@ -611,253 +611,225 @@ export const allProducts = [
   // },
 ];
 
-// export const filters = {
-//   phones: [
-//     {
-//       title: "سیستم عامل",
-//       options: [
-//         { title: "IOS", key: "system_0" },
-//         { title: "اندروید", key: "system_1" },
-//       ],
-//       key: "system",
-//     },
-//     {
-//       title: "دوربین",
-//       options: [
-//         { title: "12 مگاپیکسل", key: "camera_12" },
-//         { title: "48 مگاپیکسل", key: "camera_48" },
-//         { title: "50 مگاپیکسل", key: "camera_50" },
-//         { title: "64 مگاپیکسل", key: "camera_64" },
-//         { title: "108 مگاپیکسل", key: "camera_108" },
-//         { title: "200 مگاپیکسل", key: "camera_200" },
-//       ],
-//       key: "camera",
-//     },
-//     {
-//       title: "حافظه داخلی",
-//       options: [
-//         { title: "128 گیگابایت", key: "storage_128" },
-//         { title: "256 گیگابایت", key: "storage_256" },
-//         { title: "512 گیگابایت", key: "storage_512" },
-//       ],
-//       key: "storage",
-//     },
-//     {
-//       title: "حافظه رم",
-//       options: [
-//         { title: "3 گیگابایت", key: "ram_3" },
-//         { title: "4 گیگابایت", key: "ram_4" },
-//         { title: "6 گیگابایت", key: "ram_6" },
-//         { title: "8 گیگابایت", key: "ram_8" },
-//         { title: "12 گیگابایت", key: "ram_12" },
-//       ],
-//       key: "ram",
-//     },
-//     {
-//       title: "باتری",
-//       options: [
-//         { title: "3000 میلی آمپر ساعت", key: "battery_3000" },
-//         { title: "4000 میلی آمپر ساعت", key: "battery_4000" },
-//         { title: "5000 میلی آمپر ساعت", key: "battery_5000" },
-//         { title: "6000 میلی آمپر ساعت", key: "battery_6000" },
-//       ],
-//       key: "battery",
-//     },
-//     {
-//       title: "تعداد سیمکارت",
-//       options: [
-//         { title: "1 عدد", key: "simcard_1" },
-//         { title: "2 عدد", key: "simcard_2" },
-//       ],
-//       key: "simcard",
-//     },
-//   ],
-//   tablets: [
-//     {
-//       title: "سیستم عامل",
-//       options: [
-//         { title: "IOS", key: "system_0" },
-//         { title: "اندروید", key: "system_1" },
-//         { title: "مایکروسافت", key: "system_2" },
-//       ],
-//       key: "system",
-//     },
-//     {
-//       title: "دوربین",
-//       options: [
-//         { title: "8 مگاپیکسل", key: "camera_8" },
-//         { title: "10 مگاپیکسل", key: "camera_10" },
-//         { title: "12 مگاپیکسل", key: "camera_12" },
-//         { title: "13 مگاپیکسل", key: "camera_13" },
-//       ],
-//       key: "camera",
-//     },
-//     {
-//       title: "حافظه داخلی",
-//       options: [
-//         { title: "64 گیگابایت", key: "storage_64" },
-//         { title: "128 گیگابایت", key: "storage_128" },
-//         { title: "256 گیگابایت", key: "storage_256" },
-//       ],
-//       key: "storage",
-//     },
-//     {
-//       title: "حافظه رم",
-//       options: [
-//         { title: "4 گیگابایت", key: "ram_4" },
-//         { title: "6 گیگابایت", key: "ram_6" },
-//         { title: "8 گیگابایت", key: "ram_8" },
-//       ],
-//       key: "ram",
-//     },
-//     {
-//       title: "باتری",
-//       options: [
-//         { title: "11200 میلی آمپر ساعت", key: "battery_11200" },
-//         { title: "10050 میلی آمپر ساعت", key: "battery_10050" },
-//         { title: "8000 میلی آمپر ساعت", key: "battery_8000" },
-//         { title: "7040 میلی آمپر ساعت", key: "battery_7040" },
-//         { title: "7600 میلی آمپر ساعت", key: "battery_7600" },
-//       ],
-//       key: "battery",
-//     },
-//   ],
-//   laptops: [
-//     {
-//       title: "سازنده پردازنده",
-//       options: [
-//         { title: "Intel", key: "cpuCompany_0" },
-//         { title: "Apple", key: "cpuCompany_1" },
-//         { title: "AMD", key: "cpuCompany_2" },
-//       ],
-//       key: "cpuCompany",
-//     },
-//     {
-//       title: "سری پردازنده",
-//       options: [
-//         { title: "Core i3", key: "cpuModel_0" },
-//         { title: "Core i7", key: "cpuModel_1" },
-//         { title: "Core i5", key: "cpuModel_4" },
-//         { title: "M1", key: "cpuModel_2" },
-//         { title: "Ryzen 5", key: "cpuModel_3" },
-//       ],
-//       key: "cpuModel",
-//     },
-//     {
-//       title: "حافظه رم",
-//       options: [
-//         { title: "4 گیگابایت", key: "ram_4" },
-//         { title: "8 گیگابایت", key: "ram_8" },
-//         { title: "16 گیگابایت", key: "ram_16" },
-//         { title: "32 گیگابایت", key: "ram_32" },
-//       ],
-//       key: "ram",
-//     },
-//     {
-//       title: "نوع حافظه رم",
-//       options: [
-//         { title: "DDR4", key: "ramModel_0" },
-//         { title: "Unified", key: "ramModel_1" },
-//         { title: "LPDDR4X", key: "ramModel_2" },
-//       ],
-//       key: "ramModel",
-//     },
-//     {
-//       title: "حافظه داخلی",
-//       options: [
-//         { title: "256 گیگابایت", key: "storage_256" },
-//         { title: "512 گیگابایت", key: "storage_512" },
-//         { title: "1 ترابایت", key: "storage_1000" },
-//       ],
-//       key: "storage",
-//     },
-//     {
-//       title: "نوع حافظه داخلی",
-//       options: [
-//         { title: "هارد دیسک", key: "storageModel_0" },
-//         { title: "SSD", key: "storageModel_1" },
-//       ],
-//       key: "storageModel",
-//     },
-//   ],
-//   consoles: [
-//     {
-//       title: "برند",
-//       options: [
-//         { title: "مایکروسافت", key: "brand_0" },
-//         { title: "سونی", key: "brand_1" },
-//       ],
-//       key: "brand",
-//     },
-//   ],
-//   headphones: [
-//     {
-//       title: "برند",
-//       options: [
-//         { title: "اپل | Apple", key: "brand_0" },
-//         { title: "کیو سی وای | QCY", key: "brand_1" },
-//         { title: "هایلو | Haylou", key: "brand_2" },
-//         { title: "سامسونگ | Samsung", key: "brand_3" },
-//       ],
-//       key: "brand",
-//     },
-//     {
-//       title: "مناسب برای",
-//       options: [{ title: "گیمینگ", key: "gaming_0" }],
-//       key: "gaming",
-//     },
-//   ],
-//   digitalWatches: [
-//     {
-//       title: "برند",
-//       options: [
-//         { title: "شیائومی | Xiaomi", key: "brand_0" },
-//         { title: "سامسونگ | Samsung", key: "brand_1" },
-//         { title: "میبرو | Mibro", key: "brand_2" },
-//         { title: "اپل | Apple", key: "brand_3" },
-//       ],
-//       key: "brand",
-//     },
-//     {
-//       title: "قابلیت مکالمه",
-//       options: [
-//         { title: "دارد", key: "conversation_0" },
-//         { title: "ندارد", key: "conversation_1" },
-//       ],
-//       key: "conversation",
-//     },
-//     {
-//       title: "پشتیبانی از سیمکارت",
-//       options: [
-//         { title: "دارد", key: "simcard_0" },
-//         { title: "ندارد", key: "simcard_1" },
-//       ],
-//       key: "simcard",
-//     },
-//   ],
-//   speakers: [
-//     {
-//       title: "برند",
-//       options: [
-//         { title: "جی بی ال | JBL", key: "brand_0" },
-//         { title: "هارمن کاردن | Harman Kardon", key: "brand_1" },
-//         { title: "شیائومی | Xiaomi", key: "brand_2" },
-//         { title: "ال جی | LG", key: "brand_3" },
-//         { title: "زیلوت | Zealot", key: "brand_4" },
-//         { title: "سونی | Sony", key: "brand_5" },
-//       ],
-//       key: "brand",
-//     },
-//     {
-//       title: "دسته بندی",
-//       options: [
-//         { title: "قابل حمل", key: "group_0" },
-//         { title: "خانگی", key: "group_1" },
-//       ],
-//       key: "group",
-//     },
-//   ],
-// };
+export const filters = {
+  phones: [
+    {
+      title: "سیستم عامل",
+      options: [
+        { title: "IOS", key: "system_0" },
+        { title: "اندروید", key: "system_1" },
+      ],
+      key: "system",
+    },
+    {
+      title: "دوربین",
+      options: [
+        { title: "12 مگاپیکسل", key: "camera_12" },
+        { title: "48 مگاپیکسل", key: "camera_48" },
+        { title: "50 مگاپیکسل", key: "camera_50" },
+        { title: "64 مگاپیکسل", key: "camera_64" },
+        { title: "108 مگاپیکسل", key: "camera_108" },
+        { title: "200 مگاپیکسل", key: "camera_200" },
+      ],
+      key: "camera",
+    },
+    {
+      title: "حافظه داخلی",
+      options: [
+        { title: "128 گیگابایت", key: "storage_128" },
+        { title: "256 گیگابایت", key: "storage_256" },
+        { title: "512 گیگابایت", key: "storage_512" },
+      ],
+      key: "storage",
+    },
+    {
+      title: "حافظه رم",
+      options: [
+        { title: "3 گیگابایت", key: "ram_3" },
+        { title: "4 گیگابایت", key: "ram_4" },
+        { title: "6 گیگابایت", key: "ram_6" },
+        { title: "8 گیگابایت", key: "ram_8" },
+        { title: "12 گیگابایت", key: "ram_12" },
+      ],
+      key: "ram",
+    },
+    {
+      title: "باتری",
+      options: [
+        { title: "3000 میلی آمپر ساعت", key: "battery_3000" },
+        { title: "4000 میلی آمپر ساعت", key: "battery_4000" },
+        { title: "5000 میلی آمپر ساعت", key: "battery_5000" },
+        { title: "6000 میلی آمپر ساعت", key: "battery_6000" },
+      ],
+      key: "battery",
+    },
+    {
+      title: "تعداد سیمکارت",
+      options: [
+        { title: "1 عدد", key: "simcard_1" },
+        { title: "2 عدد", key: "simcard_2" },
+      ],
+      key: "simcard",
+    },
+  ],
+  tablets: [
+    {
+      title: "سیستم عامل",
+      options: [
+        { title: "IOS", key: "system_0" },
+        { title: "اندروید", key: "system_1" },
+        { title: "مایکروسافت", key: "system_2" },
+      ],
+      key: "system",
+    },
+    {
+      title: "دوربین",
+      options: [
+        { title: "8 مگاپیکسل", key: "camera_8" },
+        { title: "10 مگاپیکسل", key: "camera_10" },
+        { title: "12 مگاپیکسل", key: "camera_12" },
+        { title: "13 مگاپیکسل", key: "camera_13" },
+      ],
+      key: "camera",
+    },
+    {
+      title: "حافظه داخلی",
+      options: [
+        { title: "64 گیگابایت", key: "storage_64" },
+        { title: "128 گیگابایت", key: "storage_128" },
+        { title: "256 گیگابایت", key: "storage_256" },
+      ],
+      key: "storage",
+    },
+    {
+      title: "حافظه رم",
+      options: [
+        { title: "4 گیگابایت", key: "ram_4" },
+        { title: "6 گیگابایت", key: "ram_6" },
+        { title: "8 گیگابایت", key: "ram_8" },
+      ],
+      key: "ram",
+    },
+    {
+      title: "باتری",
+      options: [
+        { title: "11200 میلی آمپر ساعت", key: "battery_11200" },
+        { title: "10050 میلی آمپر ساعت", key: "battery_10050" },
+        { title: "8000 میلی آمپر ساعت", key: "battery_8000" },
+        { title: "7040 میلی آمپر ساعت", key: "battery_7040" },
+        { title: "7600 میلی آمپر ساعت", key: "battery_7600" },
+      ],
+      key: "battery",
+    },
+  ],
+  laptops: [
+    {
+      title: "سازنده پردازنده",
+      options: [
+        { title: "Intel", key: "cpuCompany_0" },
+        { title: "Apple", key: "cpuCompany_1" },
+        { title: "AMD", key: "cpuCompany_2" },
+      ],
+      key: "cpuCompany",
+    },
+    {
+      title: "سری پردازنده",
+      options: [
+        { title: "Core i3", key: "cpuModel_0" },
+        { title: "Core i7", key: "cpuModel_1" },
+        { title: "Core i5", key: "cpuModel_4" },
+        { title: "M1", key: "cpuModel_2" },
+        { title: "Ryzen 5", key: "cpuModel_3" },
+      ],
+      key: "cpuModel",
+    },
+    {
+      title: "حافظه رم",
+      options: [
+        { title: "4 گیگابایت", key: "ram_4" },
+        { title: "8 گیگابایت", key: "ram_8" },
+        { title: "16 گیگابایت", key: "ram_16" },
+        { title: "32 گیگابایت", key: "ram_32" },
+      ],
+      key: "ram",
+    },
+    {
+      title: "نوع حافظه رم",
+      options: [
+        { title: "DDR4", key: "ramModel_0" },
+        { title: "Unified", key: "ramModel_1" },
+        { title: "LPDDR4X", key: "ramModel_2" },
+      ],
+      key: "ramModel",
+    },
+    {
+      title: "حافظه داخلی",
+      options: [
+        { title: "256 گیگابایت", key: "storage_256" },
+        { title: "512 گیگابایت", key: "storage_512" },
+        { title: "1 ترابایت", key: "storage_1000" },
+      ],
+      key: "storage",
+    },
+    {
+      title: "نوع حافظه داخلی",
+      options: [
+        { title: "هارد دیسک", key: "storageModel_0" },
+        { title: "SSD", key: "storageModel_1" },
+      ],
+      key: "storageModel",
+    },
+  ],
+  consoles: [
+    {
+      title: "برند",
+      options: [
+        { title: "مایکروسافت", key: "brand_0" },
+        { title: "سونی", key: "brand_1" },
+      ],
+      key: "brand",
+    },
+  ],
+  headphones: [
+    {
+      title: "برند",
+      options: [
+        { title: "اپل | Apple", key: "brand_0" },
+        { title: "کیو سی وای | QCY", key: "brand_1" },
+        { title: "هایلو | Haylou", key: "brand_2" },
+        { title: "سامسونگ | Samsung", key: "brand_3" },
+      ],
+      key: "brand",
+    },
+    {
+      title: "مناسب برای",
+      options: [{ title: "گیمینگ", key: "gaming_0" }],
+      key: "gaming",
+    },
+  ],
+  speakers: [
+    {
+      title: "برند",
+      options: [
+        { title: "جی بی ال | JBL", key: "brand_0" },
+        { title: "هارمن کاردن | Harman Kardon", key: "brand_1" },
+        { title: "شیائومی | Xiaomi", key: "brand_2" },
+        { title: "ال جی | LG", key: "brand_3" },
+        { title: "زیلوت | Zealot", key: "brand_4" },
+        { title: "سونی | Sony", key: "brand_5" },
+      ],
+      key: "brand",
+    },
+    {
+      title: "دسته بندی",
+      options: [
+        { title: "قابل حمل", key: "group_0" },
+        { title: "خانگی", key: "group_1" },
+      ],
+      key: "group",
+    },
+  ],
+};
 // export const bestSellerProducts = [
 //   {
 //     id: 1,
