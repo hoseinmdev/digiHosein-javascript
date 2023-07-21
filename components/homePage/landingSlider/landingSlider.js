@@ -50,7 +50,6 @@ const slideChanger = (e) => {
   }
   if (action === "BACK") index <= 0 ? (index = allSlides.length - 1) : index--;
   const slide = document.querySelector(".slideImage");
-  // const slideRouteLink = document.querySelector(".slideRouteLink");
   slide.src = allSlides[index].img;
   slide.setAttribute("data-path", allSlides[index].path);
   clearInterval(sliderInterval);
@@ -63,8 +62,6 @@ const autoSlideChanger = () => {
   sliderInterval = setInterval(() => {
     index === allSlides.length - 1 ? (index = 0) : index++;
     const slide = document.querySelector(".slideImage");
-    // const slideRouteLink = document.querySelector(".slideRouteLink");
-
     slide.src = allSlides[index].img;
     slide.setAttribute("data-path", allSlides[index].path);
     fadeShow(slide, 150);
