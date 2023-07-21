@@ -2,7 +2,6 @@ import changeHash from "../../../../utils/changeHash.js";
 import getFromLocal from "../../../../utils/getFromLocal.js";
 import numberToFa from "../../../../utils/numberToFa.js";
 import reloadDom from "../../../../utils/reloadDom.js";
-
 const allProducts = getFromLocal("allProducts");
 
 const productsFoundContainer = document.createElement("div");
@@ -11,7 +10,7 @@ productsFoundContainer.classList.add("productsFoundInSearchContainer");
 const renderProductCountainer = (productsFound, inputValue) => {
   if (productsFound.length !== 0) {
     productsFoundContainer.innerHTML = `<p class="paddingTop1Rem">محصولات پیدا شده برای شما ...</p>`;
-    timeout();
+    getFoundProductsListeners();
   } else if (productsFound.length === 0 && inputValue !== "") {
     productsFoundContainer.innerHTML = `<p class="paddingTop1Rem">متاسفانه محصولی پیدا نشد :(</p>`;
   } else {
@@ -54,7 +53,6 @@ const renderProductCountainer = (productsFound, inputValue) => {
   );
   return productsFoundContainer.outerHTML;
 };
-
 const searchBox = () => {
   const searchBoxJsx = `<div class="searchBox">
     <div class="backdrop"></div>
@@ -70,9 +68,6 @@ const timeout = () => {
   const timeout = setTimeout(() => {
     const searchInputBox = document.querySelector(".searchInput");
     const backdrop = document.querySelector(".backdrop");
-    const productsImg = document.querySelectorAll(".productDetailImage");
-    const productsTitle = document.querySelectorAll(".productDetailTitle");
-
     searchInputBox.addEventListener("click", () => {
       backdrop.classList.add("showBackdrop");
       productsFoundContainer.innerHTML = "";
@@ -108,7 +103,13 @@ const timeout = () => {
         renderProductCountainer([], searchInputBox.value);
       renderProductCountainer(productsFound, searchInputBox.value);
     });
-
+    clearTimeout(timeout);
+  }, 50);
+};
+const getFoundProductsListeners = () => {
+  const getFoundProductsListeners = setTimeout(() => {
+    const productsImg = document.querySelectorAll(".productDetailImage");
+    const productsTitle = document.querySelectorAll(".productDetailTitle");
     [productsImg, productsTitle].forEach((items) => {
       items.forEach((p) => {
         p.addEventListener("click", () => {
@@ -117,12 +118,14 @@ const timeout = () => {
         });
       });
     });
-
-    clearTimeout(timeout);
-  }, 100);
+    clearTimeout(getFoundProductsListeners);
+  }, 50);
 };
 
+window.addEventListener("hashchange", () => {
+  timeout();
+  getFoundProductsListeners();
+});
+getFoundProductsListeners();
 timeout();
-window.addEventListener("hashchange", timeout);
-
 export default searchBox;

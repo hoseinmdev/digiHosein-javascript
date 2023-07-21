@@ -1,3 +1,4 @@
+import changeHash from "../../../utils/changeHash.js";
 import cartIcon from "./cartIcon/cartIcon.js";
 import searchBox from "./searchBox/searchBox.js";
 
@@ -12,28 +13,37 @@ const routes = [
   },
   {
     title: "موبایل ها",
-    path: "#productPage",
+    path: "#categories-1-phones",
   },
   {
     title: "تبلت ها",
-    path: "#cart",
+    path: "#categories-1-tablets",
+  },
+  {
+    title: "اسپیکر",
+    path: "#categories-1-speakers",
   },
   {
     title: "لپتاپ ها",
-    path: "#cart",
+    path: "#categories-1-laptops",
+  },
+  {
+    title: "هدفون و هندزفری",
+    path: "#categories-1-headphones",
   },
   {
     title: "گیمینگ",
-    path: "#cart",
+    path: "#categories-1-consoles",
   },
 ];
 const routesContainer = document.createElement("div");
 
 const renderRoutes = () => {
   routes.forEach((r) => {
-    const routeElement = document.createElement("a");
+    const routeElement = document.createElement("span");
+    routeElement.classList.add("navigationLinkRoute");
+    routeElement.setAttribute("data-path", r.path);
     routeElement.textContent = r.title;
-    routeElement.href = r.path;
     routesContainer.append(routeElement);
   });
 };
@@ -47,7 +57,7 @@ const siteNavigation = `
             ${searchBox()}
         </div>
         <div class="signupAndCartContainer">
-            <button class="signUpContainer">ورود | ثبت نام</button>
+            
             ${cartIcon()}
         </div>
     </div>
@@ -56,4 +66,22 @@ const siteNavigation = `
     </div>
     </div>`;
 
+const timeout = () => {
+  const timeout = setTimeout(() => {
+    const navigationLinkRoutes = document.querySelectorAll(
+      ".navigationLinkRoute"
+    );
+    navigationLinkRoutes.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        changeHash(`${e.currentTarget.dataset.path}`);
+        location.reload();
+      });
+    });
+    clearTimeout(timeout);
+  }, 10);
+};
+timeout();
+window.addEventListener("hashchange", () => {
+  timeout();
+});
 export default siteNavigation;

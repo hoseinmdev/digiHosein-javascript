@@ -31,7 +31,11 @@
   align-items: center;
   gap: 2rem;
 }
-.siteNavigation a {
+.navigationLinkRoute:nth-child(2) {
+  border-left: 2px solid #94a3b8;
+  padding-left: 1.5rem;
+}
+.navigationLinkRoute {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
@@ -40,10 +44,10 @@
   text-decoration: none;
   border-bottom: 2px solid white;
 }
-.siteNavigation a:hover {
+.navigationLinkRoute:hover {
   color: #4b5563;
   font-size: 1rem;
-  padding: 0.3rem 0.5rem;
+  /* padding: 0.3rem 0.5rem; */
   border-bottom: 2px solid #ef4444;
 }
 .logoAndSearchContainer {
