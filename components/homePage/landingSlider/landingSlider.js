@@ -42,7 +42,7 @@ const allSlides = [
 ];
 let index = 0;
 let sliderInterval;
-
+let touchPosition;
 const slideChanger = (e) => {
   const action = e.currentTarget.dataset.action;
   if (action === "NEXT") {
@@ -84,7 +84,27 @@ const renderLandingSliderindexOfContainer = () => {
   reloadDom(".indexOfContainer", indexOfContainer.outerHTML);
   return indexOfContainer.outerHTML;
 };
-
+const onTouchStartHandler = (e) => {
+  // console.log(e);
+  touchPosition = e.touches[0].clientX;
+};
+const onTouchMoveHandler = (e) => {
+  // console.log(e);
+  // console.log(touchPosition)
+  if (touchPosition === null) return;
+  const currentTouch = e.touches[0].clientX;
+  const diff = touchPosition - currentTouch;
+  if (diff > 5) index <= 0 ? (index = allSlides.length - 1) : index--;
+  if (diff < -5) index === allSlides.length - 1 ? (index = 0) : index++;
+  clearInterval(sliderInterval);
+  autoSlideChanger();
+  landingSlider();
+  const slide = document.querySelector(".slideImage");
+  slide.src = allSlides[index].img;
+  slide.setAttribute("data-path", allSlides[index].path);
+  fadeShow(slide, 150);
+  touchPosition = null;
+};
 const landingSlider = () => {
   const sliderContainer = `
   <div class="landingSliderContainer">
@@ -108,6 +128,8 @@ const sliderActions = () => {
       changeHash(e.target.dataset.path);
       location.reload();
     });
+    slideImage.addEventListener("touchmove", onTouchMoveHandler);
+    slideImage.addEventListener("touchstart", onTouchStartHandler);
     nextSlideButton.addEventListener("click", slideChanger);
     backSlideButton.addEventListener("click", slideChanger);
     autoSlideChanger();
