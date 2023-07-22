@@ -11,7 +11,7 @@
 }
 .categorizedProductsBlock {
   width: 100%;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -21,4 +21,15 @@
 .categorizedProductsBlock p {
   color: #475569;
   font-size: 1.05rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  .categorizedProductsPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 }

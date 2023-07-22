@@ -32,3 +32,36 @@
     border: 2px solid #ec4899;
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .circleCategoriesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .circleCategoriesContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .circleCategoriesContainer div {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #475569;
+  }
+  .circleCategoriesContainer div img {
+    width: 7rem;
+    border: 3px solid#ef4444;
+    padding: 0.2rem;
+    border-radius: 100%;
+    animation: circleCategoryAnimation 1s infinite alternate;
+  }
+}

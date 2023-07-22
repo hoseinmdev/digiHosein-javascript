@@ -49,7 +49,7 @@ const renderRoutes = () => {
 };
 renderRoutes();
 
-const siteNavigation = `
+const desktopSiteNavigation = `
     <div class="siteNavigation">
     <div class="headerOfSiteNavigation">
         <div class="logoAndSearchContainer">
@@ -65,23 +65,63 @@ const siteNavigation = `
         ${routesContainer.innerHTML}
     </div>
     </div>`;
+const mobileSiteNavigation = `
+    <div class="mobileSiteNavigation">
+      <div class="hamburgerMenuBackdrop"></div>
+      <div class="headerOfSiteNavigation">
+        <i class="fa-solid fa-bars hamburgerMenuIcon"></i>
+        <div class="hamburgerMenu">
+          <i class="fa-solid fa-xmark"></i>
+          <div class="hamburgerMenuRoutes">
+            ${routesContainer.innerHTML}
+          </div>
+        </div>
+        <div class="siteLogo"><img src="../../assets/images/siteLogo/siteLogo.png"/></div>
+        ${cartIcon()}
+      </div>
+      <div class="footerOfSiteNavigation">
+        ${searchBox()}
+      </div>
+    </div>`;
 
+let siteNavigation =
+  window.innerWidth < 1024 ? mobileSiteNavigation : desktopSiteNavigation;
 const timeout = () => {
   const timeout = setTimeout(() => {
     const navigationLinkRoutes = document.querySelectorAll(
       ".navigationLinkRoute"
     );
+    const hamburgerMenuIcon = document.querySelector(".hamburgerMenuIcon");
+    const closeHamburgerMenuIcon = document.querySelector(".fa-xmark");
+    const hamburgerMenuBackdrop = document.querySelector(
+      ".hamburgerMenuBackdrop"
+    );
+    const hamburgerMenu = document.querySelector(".hamburgerMenu");
     navigationLinkRoutes.forEach((element) => {
       element.addEventListener("click", (e) => {
         changeHash(`${e.currentTarget.dataset.path}`);
         location.reload();
       });
     });
+    hamburgerMenuIcon.addEventListener("click", (e) => {
+      hamburgerMenuBackdrop.classList.add("showBackdrop");
+      hamburgerMenu.classList.add("showHamburgerMenu");
+    });
+    hamburgerMenuBackdrop.addEventListener("click", () => {
+      hamburgerMenuBackdrop.classList.remove("showBackdrop");
+      hamburgerMenu.classList.remove("showHamburgerMenu");
+    });
+    closeHamburgerMenuIcon.addEventListener("click", () => {
+      hamburgerMenu.classList.remove("showHamburgerMenu");
+      hamburgerMenuBackdrop.classList.remove("showBackdrop");
+    });
+
     clearTimeout(timeout);
   }, 10);
 };
-timeout();
+
 window.addEventListener("hashchange", () => {
   timeout();
 });
+timeout();
 export default siteNavigation;

@@ -63,3 +63,20 @@
 .filterOptionContainer input {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1024px) {
+  .categorizedProductsFiltersContainer {
+    width: 100%;
+    margin-top: 0rem;
+    /* border: 1px solid gray; */
+    border-bottom: 1px solid #cbd5e1;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background-color: #f3f4f6;
+  }
+}

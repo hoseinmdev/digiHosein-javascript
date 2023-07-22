@@ -150,3 +150,15 @@
   border: 1px solid #ef4444;
   color: #374151;
 }
+
+@media only screen and (max-width: 1024px) {
+  .productInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    gap: 5rem;
+  }
+}

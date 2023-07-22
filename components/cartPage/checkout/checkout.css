@@ -40,3 +40,17 @@
 .checkoutContainer button:hover {
   background-color: #dc2626;
 }
+
+@media only screen and (max-width: 1024px) {
+  .checkoutContainer {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+  }
+}
