@@ -8,7 +8,7 @@ import checkout from "../checkout/checkout.js";
 const cartProductsContainer = document.createElement("div");
 cartProductsContainer.classList.add("cartProductsContainer");
 
-const cartContent = () => {
+export const cartContent = () => {
   let totalPrice = 0;
   const cart = JSON.parse(localStorage.getItem("cart"));
   cart.forEach((p) => {
@@ -123,9 +123,10 @@ const timeout = () => {
     });
     deleteProductButton.forEach((element) => {
       element.addEventListener("click", (e) => {
+        const cart = JSON.parse(localStorage.getItem("cart"));
         productActions({ type: "deleteProduct", id: e.target.id });
         cartContent();
-        location.reload(true);
+        if (cart.length == 1) location.reload(true);
       });
 
       const imagesOfProducts = document.querySelectorAll(
@@ -136,8 +137,7 @@ const timeout = () => {
         items.forEach((p) => {
           p.addEventListener("click", () => {
             changeHash(`#productPage-${p.id}`);
-                      location.reload(true);
-
+            location.reload(true);
           });
         });
       });

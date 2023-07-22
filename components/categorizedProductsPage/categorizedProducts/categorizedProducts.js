@@ -72,30 +72,12 @@ const categorizedProducts = () => {
   if (filteredProducts.length === 0) {
     productsContainer.innerHTML = `<div class="notFoundProductContainer" >
     <img src="../../../assets/images/other/notFoundProduct.png" />
-    <p class="notFoundProductText">متاسفانه محصولی یافت نشد :(</p>
-    <button class="deleteAllFiltersButton">حذف  همه فیلتر ها</button>
+    <p class="notFoundProductText">:(</p>
     </div>`;
-    timeout()
   }
   reloadDom(".categorizedProductsContainer", productsContainer.outerHTML);
   return productsContainer.outerHTML;
 };
 
 
-const timeout = () => {
-  const timeout = setTimeout(() => {
-    const deleteAllFiltersButton = document.querySelector(
-      ".deleteAllFiltersButton"
-    );
-    if (deleteAllFiltersButton) {
-      deleteAllFiltersButton.addEventListener("click", () => {
-        saveToLocal("enabledFilters", []);
-        categorizedProducts()
-        categorizedProductsFilters()
-      });
-    }
-
-    clearTimeout(timeout);
-  }, 10);
-};
 export default categorizedProducts;

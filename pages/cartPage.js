@@ -12,6 +12,5 @@ const cartPage = `
         ${checkout()}
     </div>
 </div>`;
-
 const code = siteLayout(cart.length !== 0 ? cartPage : emptyCartPage());
 export default code;

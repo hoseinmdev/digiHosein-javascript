@@ -82,13 +82,13 @@ const timeout = () => {
       addToCartButton.addEventListener("click", (e) => {
         productActions({ type: "addToCart", id: addToCartButton.id });
         productIntroduction();
-        location.reload(true);
+                  // location.reload(true);
       });
     }
     if (inCartButton) {
       inCartButton.addEventListener("click", (e) => {
         changeHash("#cart");
-        productIntroduction();
+        // productIntroduction();
         location.reload(true);
       });
     }

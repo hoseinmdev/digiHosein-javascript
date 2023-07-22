@@ -84,4 +84,13 @@
     color: white;
     animation: productDiscountAnimation 2s infinite alternate;
   }
+
+  .notFoundProductContainer img {
+    width: 10rem;
+    margin-top: 2rem;
+    display: none;
+  }
+  .notFoundProductText {
+    font-size: 1rem !important;
+  }
 }
