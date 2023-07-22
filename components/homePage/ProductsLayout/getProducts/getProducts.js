@@ -1,8 +1,6 @@
 import { allProducts } from "../../../../db.js";
 import numberToFa from "../../../../utils/numberToFa.js";
 import changeHash from "../../../../utils/changeHash.js";
-import saveToLocal from "../../../../utils/saveToLocal.js";
-import productIntroduction from "../../../singleProductPage/productIntroduction/productIntroduction.js";
 const renderProductPrice = (price, discount) => {
   if (discount) {
     const productDiscount = (price * discount) / 100;
@@ -61,9 +59,6 @@ const productActions = () => {
       items.forEach((p) => {
         p.addEventListener("click", () => {
           changeHash(`#productPage-${p.id}`);
-          // const product = findProduct(p.id);
-          productIntroduction(p.id);
-          // saveToLocal("productId", p.id)
           location.reload(true);
         });
       });

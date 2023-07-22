@@ -7,6 +7,7 @@ import {
 } from "../../../utils/productUtils.js";
 import reloadDom from "../../../utils/reloadDom.js";
 import cartIcon from "../../siteLayoutComponents/siteNavigation/cartIcon/cartIcon.js";
+
 const renderProductPrice = (price, discount) => {
   if (discount) {
     const productDiscount = (price * discount) / 100;
@@ -31,14 +32,9 @@ const renderProductPrice = (price, discount) => {
   }
 };
 
-export const productIntroduction = (id) => {
-  // console.log(id);
-  const productInfo = document.createElement("div");
-  productInfo.classList.add("productInfo");
-
-  const productToShow = findProduct(HashProductId() ? HashProductId() : id);
-  console.log(productToShow, "we secsess !!!")
-  const productInfoJsx = `
+const productIntroduction = () => {
+  const productToShow = findProduct(HashProductId());
+  const productInfoJsx = `<div class="productInfo">
   <div class="productInfoRightSide">
     <div class="img-zoom-container">
       <img
@@ -71,13 +67,11 @@ export const productIntroduction = (id) => {
   }</button>
 
     </div>
-  `;
-  productInfo.innerHTML = productInfoJsx
+  </div>`;
   cartIcon();
-  reloadDom(".productInfo", productInfo.innerHTML);
-
+  reloadDom(".productInfo", productInfoJsx);
   timeout();
-  return productInfo.outerHTML;
+  if (productToShow) return productInfoJsx;
 };
 
 const timeout = () => {
@@ -88,16 +82,14 @@ const timeout = () => {
       addToCartButton.addEventListener("click", (e) => {
         productActions({ type: "addToCart", id: addToCartButton.id });
         productIntroduction();
-                  location.reload(true);
-
+        location.reload(true);
       });
     }
     if (inCartButton) {
       inCartButton.addEventListener("click", (e) => {
         changeHash("#cart");
         productIntroduction();
-                  location.reload(true);
-
+        location.reload(true);
       });
     }
 
