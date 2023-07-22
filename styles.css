@@ -11,9 +11,12 @@
 @import url(components/homePage/ProductsLayout/productsLayout/productsLayout.css);
 @import url(components/categorizedProductsPage/categorizedProducts/categorizedProducts.css);
 @import url(components/categorizedProductsPage/categorizedProductsPage.css);
-
+@font-face {
+  font-family: VazirFont;
+  src: url(assets/fonts/Vazir-FD.ttf);
+}
 * {
-  font-family: "Vazir";
+  font-family: "VazirFont";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
