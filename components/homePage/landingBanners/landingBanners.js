@@ -12,7 +12,8 @@ const timeout = () => {
     landingBanners.forEach((element) => {
       element.addEventListener("click", (e) => {
         changeHash(`${e.target.dataset.path}`);
-        location.reload();
+                  location.reload(true);
+
       });
     });
     clearTimeout(timeout);

@@ -151,7 +151,8 @@ const sliderActions = () => {
     const slideImage = document.querySelector(".slideImage");
     slideImage.addEventListener("click", (e) => {
       changeHash(e.target.dataset.path);
-      location.reload();
+                location.reload(true);
+
     });
     slideImage.addEventListener("touchmove", onTouchMoveHandler);
     slideImage.addEventListener("touchstart", onTouchStartHandler);

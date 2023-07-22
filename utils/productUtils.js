@@ -35,8 +35,7 @@ export const findProduct = (id) => {
 
 export const HashProductId = () => {
   if (!location.hash) location.hash = "#home";
-  const productId = location.hash.split("#")[1].split("-")[1]
-    ? Number(location.hash.split("#")[1].split("-")[1])
-    : 1;
+  const productId = Number(location.hash.split("#")[1].split("-")[1])
+
   return productId;
 };

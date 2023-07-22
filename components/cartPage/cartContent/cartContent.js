@@ -125,7 +125,7 @@ const timeout = () => {
       element.addEventListener("click", (e) => {
         productActions({ type: "deleteProduct", id: e.target.id });
         cartContent();
-        location.reload();
+        location.reload(true);
       });
 
       const imagesOfProducts = document.querySelectorAll(
@@ -136,7 +136,8 @@ const timeout = () => {
         items.forEach((p) => {
           p.addEventListener("click", () => {
             changeHash(`#productPage-${p.id}`);
-            location.reload();
+                      location.reload(true);
+
           });
         });
       });

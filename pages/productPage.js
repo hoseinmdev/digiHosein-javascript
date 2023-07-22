@@ -3,10 +3,11 @@ import productIntroduction from "../components/singleProductPage/productIntroduc
 import productSpecifications from "../components/singleProductPage/productSpecifications/productSpecifications.js";
 import siteLayout from "../layout/siteLayout.js";
 
+
 const productPage = siteLayout(
   `<div class="siteLayoutContent">
-    ${productIntroduction()} 
-    ${productSpecifications()}
+    ${location.hash.split("#")[1].split("-")[1] ? productIntroduction() : ""} 
+
     ${scrollToUpButton()}
   </div>`
 );

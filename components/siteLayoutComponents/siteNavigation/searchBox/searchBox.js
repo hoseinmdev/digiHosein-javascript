@@ -114,7 +114,7 @@ const getFoundProductsListeners = () => {
       items.forEach((p) => {
         p.addEventListener("click", () => {
           changeHash(`#productPage-${p.id}`);
-          location.reload();
+          location.reload(true);
         });
       });
     });

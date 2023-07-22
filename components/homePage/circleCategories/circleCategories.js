@@ -62,7 +62,8 @@ const timeout = () => {
     circleCategoryContainers.forEach((element) => {
       element.addEventListener("click", (e) => {
         changeHash(`${e.currentTarget.dataset.path}`);
-        location.reload();
+                  location.reload(true);
+
       });
     });
     clearTimeout(timeout);

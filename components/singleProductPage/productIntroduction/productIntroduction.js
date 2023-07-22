@@ -7,7 +7,6 @@ import {
 } from "../../../utils/productUtils.js";
 import reloadDom from "../../../utils/reloadDom.js";
 import cartIcon from "../../siteLayoutComponents/siteNavigation/cartIcon/cartIcon.js";
-
 const renderProductPrice = (price, discount) => {
   if (discount) {
     const productDiscount = (price * discount) / 100;
@@ -32,9 +31,14 @@ const renderProductPrice = (price, discount) => {
   }
 };
 
-const productIntroduction = () => {
-  const productToShow = findProduct(HashProductId());
-  const productInfoJsx = `<div class="productInfo">
+export const productIntroduction = (id) => {
+  // console.log(id);
+  const productInfo = document.createElement("div");
+  productInfo.classList.add("productInfo");
+
+  const productToShow = findProduct(HashProductId() ? HashProductId() : id);
+  console.log(productToShow, "we secsess !!!")
+  const productInfoJsx = `
   <div class="productInfoRightSide">
     <div class="img-zoom-container">
       <img
@@ -67,11 +71,13 @@ const productIntroduction = () => {
   }</button>
 
     </div>
-  </div>`;
+  `;
+  productInfo.innerHTML = productInfoJsx
   cartIcon();
-  reloadDom(".productInfo", productInfoJsx);
+  reloadDom(".productInfo", productInfo.innerHTML);
+
   timeout();
-  if (productToShow) return productInfoJsx;
+  return productInfo.outerHTML;
 };
 
 const timeout = () => {
@@ -82,17 +88,18 @@ const timeout = () => {
       addToCartButton.addEventListener("click", (e) => {
         productActions({ type: "addToCart", id: addToCartButton.id });
         productIntroduction();
-        location.reload();
+                  location.reload(true);
+
       });
     }
     if (inCartButton) {
       inCartButton.addEventListener("click", (e) => {
         changeHash("#cart");
         productIntroduction();
-        location.reload();
+                  location.reload(true);
+
       });
     }
-
 
     function imageZoom(imgID, resultID) {
       var img, lens, result, cx, cy;
@@ -167,8 +174,5 @@ const timeout = () => {
 window.addEventListener("hashchange", () => {
   if (location.hash.split("#")[1].split("-")[0] === "productPage") timeout();
 });
-
-
-
 
 export default productIntroduction;
