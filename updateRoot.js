@@ -18,7 +18,7 @@ export const updateRoot = () => {
   scrollToUp();
   if (location.hash === "#home") {
     new Swiper(".mySwiper", {
-      slidesPerView: 6,
+      slidesPerView: window.innerWidth < 1024 ? 1.6 : 6,
       spaceBetween: 0,
       pagination: {
         el: ".swiper-pagination",
