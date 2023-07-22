@@ -14,9 +14,9 @@ const homepage = `
       "⭀ پیشنهادات شگفت انگیز !",
       "#ef4444"
     )}
-    ${productsLayout(getProducts("laptops"), "⭀ لپتاپ ها", "#374151")}
+    ${productsLayout(getProducts("laptops"), "⭀ لپتاپ ها", "#4b5563")}
     ${landingBanners()}
-    ${productsLayout(getProducts("phones"), "⭀ موبایل ها", "#60a5fa")}
+    ${productsLayout(getProducts("phones"), "⭀ موبایل ها", "#93c5fd")}
     ${scrollToUpButton()}
 </div>`;
 
