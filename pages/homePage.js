@@ -10,13 +10,14 @@ const homepage = `
     ${landingSlider()}
     ${circleCategories()}
     ${productsLayout(
-      getProducts("bestSeller"),
-      "⭀ پیشنهادات شگفت انگیز !",
+      getProducts("consoles"),
+      "⭀ گیمینگ !",
       "#ef4444"
     )}
     ${productsLayout(getProducts("laptops"), "⭀ لپتاپ ها", "#4b5563")}
     ${landingBanners()}
     ${productsLayout(getProducts("phones"), "⭀ موبایل ها", "#93c5fd")}
+    ${productsLayout(getProducts("tablets"), "⭀ تبلت ها", "#c4b5fd")}
     ${scrollToUpButton()}
 </div>`;
 
