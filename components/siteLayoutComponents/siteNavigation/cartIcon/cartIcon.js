@@ -70,7 +70,10 @@ const timeout = () => {
         p.addEventListener("click", () => changeHash(`#productPage-${p.id}`));
       });
     });
-    cartButton.addEventListener("click", () => changeHash("#cart"));
+    cartButton.addEventListener("click", () =>{
+       changeHash("#cart");
+       location.reload()
+    });
     clearTimeout(timeout);
   }, 100);
 };
