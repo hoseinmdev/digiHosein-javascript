@@ -1,10 +1,10 @@
-@import url(layout/siteLayout.module.css);
+@import url(layout/siteLayout.css);
 @import url(components/siteLayoutComponents/siteFooter/siteFooter.css);
 @import url(components/siteLayoutComponents/siteNavigation/siteNavigation.css);
 @import url(components/homePage/landingSlider/landingSlider.css);
-@import url(components/singleProductPage/productIntroduction/productIntroduction.module.css);
-@import url(components/scrollToUpButton/scrollToUpButton.module.css);
-@import url(components/singleProductPage/productSpecifications/productSpecifications.module.css);
+@import url(components/singleProductPage/productIntroduction/productIntroduction.css);
+@import url(components/scrollToUpButton/scrollToUpButton.css);
+@import url(components/singleProductPage/productSpecifications/productSpecifications.css);
 @import url(components/cartPage/cartPage.css);
 @import url(components/homePage/landingBanners/landingBanners.css);
 @import url(components/homePage/circleCategories/circleCategories.css);
