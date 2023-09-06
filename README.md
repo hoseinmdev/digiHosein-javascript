@@ -5,7 +5,7 @@
 1️ - This is Persian 🌱<br />
 2 - Full Responsive 💥<br />
 3 - SignUp and Login in site 😃<br />
-4 - A lot of products (Phones - Laptops - Speakers...) 📱💻<br />
+4 - A lot of products (Phones - Laptops...) 📱💻<br />
 5 - You can buy products and they will be in your cart 🛒<br />
 6 - You Can Filter Products 👌🏻<br />
 7 - Landing Slider 💎<br />
